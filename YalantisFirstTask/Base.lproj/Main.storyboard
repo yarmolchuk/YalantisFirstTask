@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NuT-P1-2VP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Riders Table View Controller-->
+        <scene sceneID="yeF-2Z-4GE">
+            <objects>
+                <tableViewController id="NuT-P1-2VP" customClass="YARidersTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="r8i-NP-fyA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YARiderTableViewCellIdentifier" rowHeight="81" id="kXW-Jd-rzF" customClass="YARiderTableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kXW-Jd-rzF" id="LlG-Kb-jFw">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQN-Dl-DWG">
+                                            <rect key="frame" x="12" y="2" width="76" height="76"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="76" id="GoZ-bB-l6W"/>
+                                                <constraint firstAttribute="height" constant="76" id="JvI-91-2yT"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Rider" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8C9-3q-2mF">
+                                            <rect key="frame" x="96" y="29" width="96" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="kUC-j8-scH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8C9-3q-2mF" firstAttribute="leading" secondItem="fQN-Dl-DWG" secondAttribute="trailing" constant="8" id="E44-tX-RTE"/>
+                                        <constraint firstAttribute="bottom" secondItem="fQN-Dl-DWG" secondAttribute="bottom" constant="2.5" id="TQI-ri-fbs"/>
+                                        <constraint firstItem="fQN-Dl-DWG" firstAttribute="top" secondItem="LlG-Kb-jFw" secondAttribute="top" constant="2" id="h3q-rr-cqy"/>
+                                        <constraint firstItem="fQN-Dl-DWG" firstAttribute="top" secondItem="LlG-Kb-jFw" secondAttribute="top" constant="2" id="np8-1Q-klF"/>
+                                        <constraint firstItem="fQN-Dl-DWG" firstAttribute="leading" secondItem="LlG-Kb-jFw" secondAttribute="leading" constant="12" id="s95-ph-LeM"/>
+                                        <constraint firstItem="8C9-3q-2mF" firstAttribute="top" secondItem="LlG-Kb-jFw" secondAttribute="top" constant="29" id="w3e-em-Zgr"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="TQI-ri-fbs"/>
+                                            <exclude reference="np8-1Q-klF"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameRider" destination="8C9-3q-2mF" id="TEG-UN-6tV"/>
+                                    <outlet property="photoRider" destination="fQN-Dl-DWG" id="g7t-80-Ew9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NuT-P1-2VP" id="n8y-Es-BzI"/>
+                            <outlet property="delegate" destination="NuT-P1-2VP" id="Wyj-Xc-L7b"/>
+                        </connections>
+                    </tableView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jZ-B0-K4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256" y="431"/>
+        </scene>
+    </scenes>
+</document>
