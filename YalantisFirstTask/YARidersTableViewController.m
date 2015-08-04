@@ -12,8 +12,6 @@
 
 @interface YARidersTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *riders;
-
 @end
 
 @implementation YARidersTableViewController
